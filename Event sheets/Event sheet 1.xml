@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Hud</include>
+        <variable constant="0" name="SlimeHeath" sid="630714026279354" static="0" type="number">3</variable>
+        <variable constant="0" name="Sprint" sid="447135965858566" static="0" type="number">0</variable>
+        <variable constant="0" name="Stamina" sid="295191592883007" static="0" type="number">15</variable>
+        <variable constant="0" name="Health" sid="158944638278968" static="0" type="number">4</variable>
+        <variable constant="0" name="Gold" sid="910872753857843" static="0" type="number">0</variable>
+        <variable constant="0" name="Dead" sid="882677332269635" static="0" type="number">0</variable>
+        <variable constant="0" name="inventory_open" sid="840254342228193" static="0" type="number">0</variable>
+        <event-group description="" sid="763687313571749" title="Moving">
+            <sub-events>
+                <event-block sid="585444949720427">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="219315868624756" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="621666633619485" type="Character">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="282611390424437" type="Character">
+                            <param id="0" name="Animation">&quot;Walkforward&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226475040773710">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="390038241615501" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="812055665502740" type="Character">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="519205974150912" type="Character">
+                            <param id="0" name="Animation">&quot;Walkleft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="530369194861466">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="855517088522992" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="409825928348624" type="Character">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="613127570593324" type="Character">
+                            <param id="0" name="Animation">&quot;Walkdown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="996939733797034">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="760246645395056" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="899772705667223" type="Character">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="700440797122122" type="Character">
+                            <param id="0" name="Animation">&quot;Walkright&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442775181916198">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="317567278224105" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Scroll to object" sid="873647986188783" type="System">
+                            <param id="0" name="Object">Character</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="391686774200599">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="318651031177323" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="268294645912924" type="Character" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="786630583584383">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="539502243828412" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="972492087941224" type="Character" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="128433392423353">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="595080814735411" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="315618595810651" type="Character" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="267505005807201">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="219907682287899" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="125690995961000" type="Character" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="259275536871314" title="IDLE">
+            <sub-events>
+                <event-block sid="696231912536712">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="196796227481758" type="Character" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="677101874584838" type="Character">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="248266349971543" title="Attack">
+            <sub-events>
+                <event-group description="" sid="228445881042076" title="Bow" />
+                <event-block sid="347279946139114">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="613460202102791" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="112629178942450" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="160898516252566">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Set position" sid="991592270058822" type="Sword">
+                            <param id="0" name="X">Character.X</param>
+                            <param id="1" name="Y">Character.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847820441681928">
+                    <conditions>
+                        <condition id="0" name="On click" sid="550873769166094" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="447243133168795" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="484865179122009" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="586426429774153" type="Character">
+                            <param id="0" name="Object">Sword</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="497102477525313" type="Sword">
+                            <param id="0" name="Animation">&quot;Swing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="403926636656424" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="782021172516464" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="144304315729795" type="Sword" />
+                    </actions>
+                </event-block>
+                <event-block sid="815104189461762">
+                    <conditions>
+                        <condition disabled="1" id="0" name="On click" sid="235412918439688" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="876006743933675">
+                    <conditions>
+                        <condition id="0" name="On click" sid="991277702235565" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="162045024550984" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="719942263521789" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="308813210848886" type="Character">
+                            <param id="0" name="Object">Sword</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="536641412819633" type="Sword">
+                            <param id="0" name="Animation">&quot;Swing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="989903812236525" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="265957815173799" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="169458032928940" type="Sword" />
+                    </actions>
+                </event-block>
+                <event-block sid="576793981444856">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="728256195536215" type="Sword" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="851945559254862" title="Enemy">
+            <sub-events>
+                <event-block sid="640226844853105">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="538458155945933" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="416039438972038" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="827499645061710">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Set position" sid="564390512882921" type="Sword">
+                            <param id="0" name="X">Character.X</param>
+                            <param id="1" name="Y">Character.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287232844391743">
+                    <conditions>
+                        <condition id="0" name="On click" sid="688402487755983" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="954972068043214" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="393988476898105" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="679438226927267" type="Character">
+                            <param id="0" name="Object">Sword</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="137770793859092" type="Sword">
+                            <param id="0" name="Animation">&quot;Swing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="481015896065438" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="531081462385898" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="758125847266677" type="Sword" />
+                    </actions>
+                </event-block>
+                <event-block sid="755974863699858">
+                    <conditions>
+                        <condition id="0" name="On click" sid="618724625067612" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="808539837320287" type="System">
+                            <param id="0" name="Group name">&quot;IDLE&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="559542506841787" type="Character">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="637451950728984" type="Character">
+                            <param id="0" name="Object">Sword</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="837456578360763" type="Sword">
+                            <param id="0" name="Animation">&quot;Swing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="811810906132735" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="623720213488445" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="568372894001699" type="Sword" />
+                    </actions>
+                </event-block>
+                <event-block sid="540881422600647">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="964982499938548" type="Sword" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-group description="" sid="841322029183063" title="Slime" />
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
