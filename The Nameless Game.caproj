@@ -23,7 +23,6 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
@@ -1323,7 +1322,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\jhedges\Downloads\Dungeon Done.gif" />
         </object-type>
-        <object-type name="Sprite8" sid="219029095598262">
+        <object-type name="ShootyBow" sid="219029095598262">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="3" loop="0" name="Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="959874773804244" speed="5">
@@ -1358,7 +1357,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite9" sid="380370771660547">
+        <object-type name="BeerBottle" sid="380370771660547">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="8Direction" sid="271955969438863">
@@ -1496,13 +1495,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite10" sid="191403155739802">
+        <object-type name="ArrowL" sid="191403155739802">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="969987888914761">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651979044142923" speed="5">
                     <frame duration="1" hotspotX="0.625" hotspotY="0.5625" original-source="C:\Users\jhedges\Downloads\Arrow.gif">
@@ -1512,6 +1506,72 @@
                             <point x="0.34375" y="0.572266" />
                             <point x="0.378906" y="0.619141" />
                             <point x="0.65625" y="0.621094" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArrowR" sid="271851613514549">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="942993437052464" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\jhedges\Downloads\Arrow.gif">
+                        <collision-poly>
+                            <point x="0.333333" y="0.6" />
+                            <point x="0.666667" y="0.6" />
+                            <point x="0.166667" y="0.2" />
+                            <point x="0.5" y="0.4" />
+                            <point x="0.833333" y="0.2" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArrowU" sid="670973634483919">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813938210822559" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Arrow.gif">
+                        <collision-poly>
+                            <point x="0.6" y="0.666667" />
+                            <point x="0.6" y="0.333333" />
+                            <point x="0.2" y="0.833333" />
+                            <point x="0.4" y="0.5" />
+                            <point x="0.2" y="0.166667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArrowD" sid="273372294291121">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891030223203263" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Arrow.gif">
+                        <collision-poly>
+                            <point x="0.2" y="0.833333" />
+                            <point x="0.4" y="0.5" />
+                            <point x="0.2" y="0.166667" />
+                            <point x="0.6" y="0.666667" />
+                            <point x="0.6" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="444677711065312">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155570468229140" speed="5">
+                    <frame duration="1" hotspotX="0.454545" hotspotY="0.363636" original-source="C:\Users\jhedges\Downloads\House.gif">
+                        <collision-poly>
+                            <point x="0.454545" y="0.030303" />
+                            <point x="0.666667" y="0.151515" />
+                            <point x="0.939394" y="0.363636" />
+                            <point x="0.909091" y="0.818182" />
+                            <point x="0.454545" y="0.969697" />
+                            <point x="0.0909091" y="0.727273" />
+                            <point x="0.0606061" y="0.363636" />
                         </collision-poly>
                     </frame>
                 </animation>
