@@ -144,6 +144,28 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="560590459136246">
+            <conditions>
+                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="194734543182470" type="Enemy" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="255849228129093" type="Enemy">
+                    <param id="0" name="Animation">&quot;NiceIdle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="811934748349950">
+            <conditions>
+                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="546253048104728" type="Sprite9" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="330023260088980" type="Sprite9">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="248266349971543" title="Attack">
             <sub-events>
                 <event-group description="" sid="228445881042076" title="Bow" />
@@ -204,19 +226,10 @@
                         <action id="-9" name="Destroy" sid="144304315729795" type="Sword" />
                     </actions>
                 </event-block>
-                <event-block sid="815104189461762">
-                    <conditions>
-                        <condition disabled="1" id="0" name="On click" sid="235412918439688" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
                 <event-block sid="876006743933675">
                     <conditions>
                         <condition id="0" name="On click" sid="991277702235565" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
+                            <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                         </condition>
                     </conditions>
@@ -230,12 +243,12 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="308813210848886" type="Character">
-                            <param id="0" name="Object">Sword</param>
+                            <param id="0" name="Object">Sprite8</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="536641412819633" type="Sword">
-                            <param id="0" name="Animation">&quot;Swing&quot;</param>
+                        <action id="4" name="Set animation" sid="536641412819633" type="Sprite8">
+                            <param id="0" name="Animation">&quot;Shoot&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-11" name="Subtract from" sid="989903812236525" type="System">
@@ -245,7 +258,13 @@
                         <action id="-16" name="Wait" sid="265957815173799" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="169458032928940" type="Sword" />
+                        <action id="-9" name="Destroy" sid="169458032928940" type="Sprite8" />
+                        <action id="-3" name="Create object" sid="801468438692666" type="System">
+                            <param id="0" name="Object to create">Sprite10</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">Sprite8.X</param>
+                            <param id="3" name="Y">Sprite8.Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="576793981444856">
