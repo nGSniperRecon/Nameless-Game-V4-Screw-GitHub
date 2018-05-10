@@ -215,7 +215,21 @@
         </event-block>
         <event-group description="" sid="248266349971543" title="Attack">
             <sub-events>
-                <event-group description="" sid="228445881042076" title="Bow" />
+                <event-group description="" sid="228445881042076" title="Bow">
+                    <sub-events>
+                        <event-block sid="740644220098975">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="612124376820725" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="519855565341990" type="ShootyBow">
+                                    <param id="0" name="Pin to">Character</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="347279946139114">
                     <conditions>
                         <condition id="4" name="On finished" sid="613460202102791" type="Character">
@@ -296,6 +310,9 @@
                             <param id="0" name="Object">ShootyBow</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="969720768230527" type="ShootyBow">
+                            <param id="0" name="Degrees">90</param>
                         </action>
                         <action id="4" name="Set animation" sid="940964706657928" type="ShootyBow">
                             <param id="0" name="Animation">&quot;Shoot&quot;</param>
@@ -385,6 +402,9 @@
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-19" name="Rotate counter-clockwise" sid="306495372287962" type="ShootyBow">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
                         <action id="4" name="Set animation" sid="439607521721472" type="ShootyBow">
                             <param id="0" name="Animation">&quot;Shoot&quot;</param>
                             <param id="1" name="From">1</param>
@@ -428,6 +448,9 @@
                             <param id="0" name="Object">ShootyBow</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" sid="344333905218255" type="ShootyBow">
+                            <param id="0" name="Degrees">180</param>
                         </action>
                         <action id="4" name="Set animation" sid="219873411907841" type="ShootyBow">
                             <param id="0" name="Animation">&quot;Shoot&quot;</param>
