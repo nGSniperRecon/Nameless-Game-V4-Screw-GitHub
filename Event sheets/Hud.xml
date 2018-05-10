@@ -29,14 +29,14 @@
                 </event-block>
                 <event-block sid="773785241265279">
                     <conditions>
-                        <condition id="-19" name="On destroyed" sid="709645680359083" type="Enemy" />
+                        <condition id="-19" name="On destroyed" sid="709645680359083" type="Slime" />
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="433277014458994" type="System">
                             <param id="0" name="Object to create">Coin</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Enemy.X</param>
-                            <param id="3" name="Y">Enemy.Y</param>
+                            <param id="2" name="X">Slime.X</param>
+                            <param id="3" name="Y">Slime.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -67,7 +67,7 @@
                 </event-block>
                 <event-block sid="489217771876309">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="603585444640552" type="Enemy">
+                        <condition id="0" name="On collision with another object" sid="603585444640552" type="Slime">
                             <param id="0" name="Object">Character</param>
                         </condition>
                     </conditions>
@@ -76,13 +76,13 @@
                             <param id="0" name="Variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="448967015375610" type="Enemy">
+                        <action id="11" name="Set collisions enabled" sid="448967015375610" type="Slime">
                             <param id="0" name="Collisions">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="555691017508795" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="271396635637851" type="Enemy">
+                        <action id="11" name="Set collisions enabled" sid="271396635637851" type="Slime">
                             <param id="0" name="Collisions">1</param>
                         </action>
                     </actions>

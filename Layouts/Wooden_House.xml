@@ -695,7 +695,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy" uid="33">
+                <instance type="Slime" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -733,9 +733,37 @@
                         <behavior-instance type="MoveTo">
                             <properties>
                                 <activated>Yes</activated>
-                                <max-speed>400</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>0</acceleration>
                                 <deceleration>0</deceleration>
+                                <continued-mode>No</continued-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>450</speed>
+                                <acceleration>55</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Zigzag">
+                            <properties>
+                                <activated>Yes</activated>
+                                <start>Yes</start>
+                                <rotatable>Yes</rotatable>
+                                <repeat-count>0</repeat-count>
+                                <commands></commands>
+                                <max-moving-speed>400</max-moving-speed>
+                                <moving-acceleration>0</moving-acceleration>
+                                <moving-deceleration>0</moving-deceleration>
+                                <max-rotation-speed>180</max-rotation-speed>
+                                <rotation-acceleration>0</rotation-acceleration>
+                                <rotation-deceleration>0</rotation-deceleration>
+                                <initial-angle>0</initial-angle>
+                                <precise-mode>No</precise-mode>
                                 <continued-mode>No</continued-mode>
                             </properties>
                         </behavior-instance>
@@ -747,10 +775,10 @@
                         <y>496.993865967</y>
                         <z>0</z>
                         <width>16.426668167</width>
-                        <height>11.156126976</height>
+                        <height>11.15612793</height>
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.909090936</hotspotY>
+                        <hotspotY>1.090909123</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1091,8 +1119,8 @@
                         <width>16</width>
                         <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>-8.8125</hotspotX>
-                        <hotspotY>-5.9375</hotspotY>
+                        <hotspotX>0.9375</hotspotX>
+                        <hotspotY>0.0625</hotspotY>
                         <angle>0.718636453</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1152,14 +1180,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>295.304962158</x>
-                        <y>126.150688171</y>
+                        <x>288.885009766</x>
+                        <y>138.153411865</y>
                         <z>0</z>
                         <width>7</width>
                         <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.285714298</hotspotX>
-                        <hotspotY>0.416666657</hotspotY>
+                        <hotspotX>0.571428597</hotspotX>
+                        <hotspotY>0.958333313</hotspotY>
                         <angle>0.643451035</angle>
                         <opacity>1</opacity>
                     </world>

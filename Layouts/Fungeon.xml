@@ -2,7 +2,7 @@
 <c2layout>
     <name>Fungeon</name>
     <sid>411872215480593</sid>
-    <event-sheet></event-sheet>
+    <event-sheet>Event sheet 1</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>

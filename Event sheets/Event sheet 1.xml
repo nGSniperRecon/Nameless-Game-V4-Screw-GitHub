@@ -202,7 +202,20 @@
                             <actions>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="519855565341990" type="ShootyBow">
                                     <param id="0" name="Pin to">Character</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865680526048526">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="253999026161519" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="912860119739293" type="ShootyBow">
+                                    <param id="0" name="X">Character.X</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="590033385979046" type="ShootyBow">
+                                    <param id="0" name="Y">Character.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -583,16 +596,16 @@
                         <variable constant="0" name="SlimeY" sid="926081509612210" static="0" type="number">0</variable>
                         <event-block sid="708478531219204">
                             <conditions>
-                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="747556431889967" type="Enemy">
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="747556431889967" type="Slime">
                                     <param id="0" name="Object">Character</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="387491564730028" type="Enemy">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="387491564730028" type="Slime">
                                     <param id="0" name="Instance variable">Follow</param>
                                 </condition>
-                                <condition id="-3" name="Is on-screen" sid="707414556183907" type="Enemy" />
+                                <condition id="-3" name="Is on-screen" sid="707414556183907" type="Slime" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="907309993801768" type="Enemy">
+                                <action id="-13" name="Set boolean" sid="907309993801768" type="Slime">
                                     <param id="0" name="Instance variable">Follow</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -600,20 +613,51 @@
                         </event-block>
                         <event-block sid="301170945587027">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="198111818265860" type="Enemy">
+                                <condition id="-8" name="Is boolean instance variable set" sid="198111818265860" type="Slime">
                                     <param id="0" name="Instance variable">Follow</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="584644372059801" type="System">
+                                    <param id="0" name="First value">Character.X</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">Slime.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="MoveTo" id="4" name="Move to XY" sid="833136542427231" type="Enemy">
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="833136542427231" type="Slime">
                                     <param id="0" name="X">Character.ImagePointX(&quot;moveto&quot;)</param>
                                     <param id="1" name="Y">Character.ImagePointY(&quot;moveto&quot;)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="355457247832488" type="Slime">
+                                    <param id="0" name="Animation">&quot;LRoll&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="846384754190826">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="260497424172844" type="Slime">
+                                    <param id="0" name="Instance variable">Follow</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="986772420173646" type="System">
+                                    <param id="0" name="First value">Character.X</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Slime.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="366384978586977" type="Slime">
+                                    <param id="0" name="X">Character.ImagePointX(&quot;moveto&quot;)</param>
+                                    <param id="1" name="Y">Character.ImagePointY(&quot;moveto&quot;)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="474450776305316" type="Slime">
+                                    <param id="0" name="Animation">&quot;RRoll&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="598698907105747">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="298337966690703" type="Enemy">
+                                <condition id="0" name="On collision with another object" sid="298337966690703" type="Slime">
                                     <param id="0" name="Object">Character</param>
                                 </condition>
                             </conditions>
@@ -626,8 +670,12 @@
                                     <param id="0" name="Variable">SlimeY</param>
                                     <param id="1" name="Value">SlimeY</param>
                                 </action>
-                                <action behavior="MoveTo" id="5" name="Set current speed" sid="967150740976553" type="Enemy">
+                                <action behavior="MoveTo" id="5" name="Set current speed" sid="967150740976553" type="Slime">
                                     <param id="0" name="Current speed">200</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="576306095381905" type="Slime">
+                                    <param id="0" name="X">Character.X+30</param>
+                                    <param id="1" name="Y">Character.Y-30</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -669,5 +717,158 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="930739746555358">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="660923955371604" type="Sword">
+                    <param id="0" name="Object">Slime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="551436604906135" type="Slime" />
+            </actions>
+        </event-block>
+        <event-block sid="943903133635412">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="829785576667674" type="Sword">
+                    <param id="0" name="Object">BeerBottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="572617321361147" type="BeerBottle" />
+            </actions>
+        </event-block>
+        <event-block sid="760047837964749">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="685878414249467" type="ArrowD">
+                    <param id="0" name="Object">Slime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="369807486411534" type="Slime" />
+            </actions>
+        </event-block>
+        <event-block sid="158639814873501">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="529351951257258" type="ArrowD">
+                    <param id="0" name="Object">BeerBottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="171321721719351" type="BeerBottle" />
+            </actions>
+        </event-block>
+        <event-block sid="347220283508300">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="628544298547729" type="ArrowL">
+                    <param id="0" name="Object">Slime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="694884907035091" type="Slime" />
+            </actions>
+        </event-block>
+        <event-block sid="644182535730091">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="543567814782012" type="ArrowL">
+                    <param id="0" name="Object">BeerBottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="568964936038654" type="BeerBottle" />
+            </actions>
+        </event-block>
+        <event-block sid="962281783130290">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="898740548772406" type="ArrowR">
+                    <param id="0" name="Object">Slime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="988900408403732" type="Slime" />
+            </actions>
+        </event-block>
+        <event-block sid="184132501489123">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="974433237420053" type="ArrowR">
+                    <param id="0" name="Object">BeerBottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="119619354849767" type="BeerBottle" />
+            </actions>
+        </event-block>
+        <event-block sid="256713012168729">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="102969279152789" type="ArrowU">
+                    <param id="0" name="Object">Slime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="510796364420846" type="Slime" />
+            </actions>
+        </event-block>
+        <event-block sid="616067013611951">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="799259590582580" type="ArrowU">
+                    <param id="0" name="Object">BeerBottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="463784744201185" type="BeerBottle" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="337474550155755" title="Arrow Knock Back" />
+        <event-block sid="707852337950462">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="108546266073385" type="Slime">
+                    <param id="0" name="Object">Character</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="986998568049999" type="Slime">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="327180880171685" type="Slime">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="210987909183224" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="335602483194254" type="Slime">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="LineOfSight" id="0" name="Set range" sid="238675844074648" type="Slime">
+                    <param id="0" name="Range">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="193706729620311" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action behavior="LineOfSight" id="0" name="Set range" sid="882708916997985" type="Slime">
+                    <param id="0" name="Range">10000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136062150559806">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="518541907465595" type="Character">
+                    <param id="0" name="Object">Sprite6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="282191500269041" type="System">
+                    <param id="0" name="Layout">Plain</param>
+                </action>
+                <action id="-3" name="Create object" sid="576127722287664" type="System">
+                    <param id="0" name="Object to create">Character</param>
+                    <param id="1" name="Layer">&quot;Layout&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="250578327143412" type="Character">
+                    <param id="0" name="X">House.X</param>
+                    <param id="1" name="Y">House.Y+10</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

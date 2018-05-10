@@ -38,7 +38,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Coin/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Enemy/" />
+        <folder expanded="1" path="animation-folder/Slime/" />
         <folder expanded="1" path="animation-folder/Heart/" />
         <folder expanded="1" path="animation-folder/Melee/" />
         <folder expanded="1" path="animation-folder/Range/" />
@@ -54,6 +54,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ArrowR/" />
         <folder expanded="1" path="animation-folder/ArrowU/" />
         <folder expanded="1" path="animation-folder/ArrowD/" />
-        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/House/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
     </folders-expanded>
 </c2uistate>
