@@ -702,6 +702,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Follow>false</Follow>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -722,9 +725,18 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>10000</range>
+                                <range>100</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="MoveTo">
+                            <properties>
+                                <activated>Yes</activated>
+                                <max-speed>400</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
+                                <continued-mode>No</continued-mode>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -828,6 +840,14 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -854,8 +874,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>522.055297852</x>
-                        <y>-171.777740479</y>
+                        <x>-288.456939697</x>
+                        <y>-3.810684204</y>
                         <z>0</z>
                         <width>12</width>
                         <height>5</height>
@@ -876,8 +896,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>505.403656006</x>
-                        <y>-152.22984314</y>
+                        <x>-305.108581543</x>
+                        <y>15.737213135</y>
                         <z>0</z>
                         <width>5</width>
                         <height>12</height>
@@ -898,8 +918,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>545.22253418</x>
-                        <y>-162.365783691</y>
+                        <x>-265.289703369</x>
+                        <y>5.601272583</y>
                         <z>0</z>
                         <width>5</width>
                         <height>12</height>
@@ -1157,8 +1177,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>302.322601318</x>
-                        <y>-117.115844727</y>
+                        <x>-508.18963623</x>
+                        <y>50.851211548</y>
                         <z>0</z>
                         <width>12</width>
                         <height>18</height>
@@ -1179,8 +1199,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>495.991210938</x>
-                        <y>-174.311340332</y>
+                        <x>-314.521026611</x>
+                        <y>-6.344284058</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>

@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -988,6 +989,9 @@
         </object-type>
         <object-type name="Enemy" sid="898322066535939">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Follow" sid="527312444281401" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="319756515998046">
                     <behavior id="solid" />
@@ -997,6 +1001,9 @@
                 </behavior-type>
                 <behavior-type name="LineOfSight" sid="162782662781563">
                     <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="MoveTo" sid="844319265099661">
+                    <behavior id="Rex_MoveTo" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -1367,6 +1374,9 @@
             <behaviors>
                 <behavior-type name="8Direction" sid="271955969438863">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="865894211318041">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
