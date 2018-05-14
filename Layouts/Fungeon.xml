@@ -532,21 +532,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stairs" uid="75">
+                <instance type="FungeonWall" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>452.431762695</x>
-                        <y>747.128479004</y>
+                        <x>415.455627441</x>
+                        <y>795.832580566</y>
                         <z>0</z>
-                        <width>81.950614929</width>
-                        <height>81.950614929</height>
+                        <width>438</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

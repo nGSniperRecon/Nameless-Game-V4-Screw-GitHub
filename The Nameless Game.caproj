@@ -62,7 +62,7 @@
                 <plugin id="Spritefont2" />
                 <texture />
             </object-type>
-            <object-type name="HudScore" sid="381859410291910">
+            <object-type global="1" name="HudScore" sid="381859410291910">
                 <plugin id="Spritefont2" />
                 <texture />
             </object-type>
@@ -1256,7 +1256,7 @@
         <object-type name="Score" sid="962399356867087">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text3" sid="165387455737594">
+        <object-type global="1" name="Text3" sid="165387455737594">
             <plugin id="Text" />
         </object-type>
         <object-type name="Sprite2" sid="825034947858144">
@@ -1608,7 +1608,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Heart" sid="256941650006002">
+        <object-type global="1" name="Heart" sid="256941650006002">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="5" loop="0" name="4Heart" pingpong="0" repeatcount="1" repeatto="0" sid="727416401023516" speed="5">
@@ -1620,7 +1620,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Melee" sid="574730186950330">
+        <object-type global="1" name="Melee" sid="574730186950330">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593975542674690" speed="5">
@@ -1628,7 +1628,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Range" sid="504162972252475">
+        <object-type global="1" name="Range" sid="504162972252475">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571860455007354" speed="5">
@@ -1680,7 +1680,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BowIcon" sid="938976057871920">
+        <object-type global="1" name="BowIcon" sid="938976057871920">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380696328699569" speed="5">
@@ -1699,7 +1699,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="StaminaBar" sid="114045194152613">
+        <object-type global="1" name="StaminaBar" sid="114045194152613">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="max_width" sid="558123152151461" type="number" />
@@ -1739,7 +1739,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite7" sid="960621956365107">
+        <object-type global="1" name="Sprite7" sid="960621956365107">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614359362964742" speed="5">
@@ -2073,23 +2073,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296689287398602" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SpawmBones" sid="762610287193663">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531649452492960" speed="5">
-                    <frame duration="1" hotspotX="0.5625" hotspotY="0.615385" original-source="C:\Users\jhedges\Downloads\Spawn Bones.png">
-                        <collision-poly>
-                            <point x="0.320313" y="0.120192" />
-                            <point x="0.578125" y="0.0865383" />
-                            <point x="0.800781" y="0.548077" />
-                            <point x="0.816406" y="0.846154" />
-                            <point x="0.417969" y="0.826923" />
-                            <point x="0.121094" y="0.586538" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
