@@ -685,138 +685,75 @@
         </event-group>
         <event-group description="" sid="175714744343946" title="Beer Bottle">
             <sub-events>
-                <event-block sid="811934748349950">
+                <variable constant="0" name="BeerBottleY" sid="359827025437252" static="0" type="number">0</variable>
+                <variable constant="0" name="BeerBottleX" sid="566828742168193" static="0" type="number">0</variable>
+                <event-block sid="832679609746426">
                     <conditions>
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="546253048104728" type="BeerBottle" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="330023260088980" type="BeerBottle">
-                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="458457454627934">
-                    <conditions>
-                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="966739918836860" type="BeerBottle">
+                        <condition id="0" name="On collision with another object" sid="900278103798916" type="BeerBottle">
                             <param id="0" name="Object">Character</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="570978090153271" type="BeerBottle">
-                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                        <action behavior="MoveTo" id="5" name="Set current speed" sid="722523547836298" type="BeerBottle">
+                            <param id="0" name="Current speed">200</param>
+                        </action>
+                        <action behavior="MoveTo" id="6" name="Move to object" sid="534154228784104" type="BeerBottle">
+                            <param id="0" name="Target">Character</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="529065414937469" type="BeerBottle">
+                            <param id="0" name="Animation">&quot;Blam&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="8Direction" id="10" name="Set vector Y" sid="794591524163844" type="BeerBottle">
-                            <param id="0" name="Vector Y">Character.Y</param>
-                        </action>
-                        <action behavior="8Direction" id="9" name="Set vector X" sid="844849118490132" type="BeerBottle">
-                            <param id="0" name="Vector X">Character.X</param>
+                        <action id="-11" name="Subtract from" sid="202134487598947" type="System">
+                            <param id="0" name="Variable">Health</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="428973888170033">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="723604978248183" type="BeerBottle">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="669631263464503" type="BeerBottle">
+                            <param id="0" name="Instance variable">Follow</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="734318837537750" type="BeerBottle" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="621789554473758" type="BeerBottle">
+                            <param id="0" name="Instance variable">Follow</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209423729377831">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="930642508740628" type="BeerBottle">
+                            <param id="0" name="Instance variable">Follow</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="MoveTo" id="4" name="Move to XY" sid="382784599218998" type="BeerBottle">
+                            <param id="0" name="X">Character.ImagePointX(&quot;moveto&quot;)</param>
+                            <param id="1" name="Y">Character.ImagePointY(&quot;moveto&quot;)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="793515162427812" type="BeerBottle">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="129617038611099">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="266028420282762" type="BeerBottle">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="930739746555358">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="660923955371604" type="Sword">
-                    <param id="0" name="Object">Slime</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="551436604906135" type="Slime" />
-            </actions>
-        </event-block>
-        <event-block sid="943903133635412">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="829785576667674" type="Sword">
-                    <param id="0" name="Object">BeerBottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="572617321361147" type="BeerBottle" />
-            </actions>
-        </event-block>
-        <event-block sid="760047837964749">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="685878414249467" type="ArrowD">
-                    <param id="0" name="Object">Slime</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="369807486411534" type="Slime" />
-            </actions>
-        </event-block>
-        <event-block sid="158639814873501">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="529351951257258" type="ArrowD">
-                    <param id="0" name="Object">BeerBottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="171321721719351" type="BeerBottle" />
-            </actions>
-        </event-block>
-        <event-block sid="347220283508300">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="628544298547729" type="ArrowL">
-                    <param id="0" name="Object">Slime</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="694884907035091" type="Slime" />
-            </actions>
-        </event-block>
-        <event-block sid="644182535730091">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="543567814782012" type="ArrowL">
-                    <param id="0" name="Object">BeerBottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="568964936038654" type="BeerBottle" />
-            </actions>
-        </event-block>
-        <event-block sid="962281783130290">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="898740548772406" type="ArrowR">
-                    <param id="0" name="Object">Slime</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="988900408403732" type="Slime" />
-            </actions>
-        </event-block>
-        <event-block sid="184132501489123">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="974433237420053" type="ArrowR">
-                    <param id="0" name="Object">BeerBottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="119619354849767" type="BeerBottle" />
-            </actions>
-        </event-block>
-        <event-block sid="256713012168729">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="102969279152789" type="ArrowU">
-                    <param id="0" name="Object">Slime</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="510796364420846" type="Slime" />
-            </actions>
-        </event-block>
-        <event-block sid="616067013611951">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="799259590582580" type="ArrowU">
-                    <param id="0" name="Object">BeerBottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="463784744201185" type="BeerBottle" />
-            </actions>
-        </event-block>
         <event-group description="" sid="337474550155755" title="Arrow Knock Back" />
         <event-block sid="707852337950462">
             <conditions>
@@ -870,5 +807,398 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="565160042936635">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="215834860414721" type="Character">
+                    <param id="0" name="Object">Stairs</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="970622757737979" type="System">
+                    <param id="0" name="Layout">Fungeon</param>
+                </action>
+                <action id="-3" name="Create object" sid="492694865909641" type="System">
+                    <param id="0" name="Object to create">Character</param>
+                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="230576333582991" type="Character">
+                    <param id="0" name="X">SpawmBones.X</param>
+                    <param id="1" name="Y">SpawmBones.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="698934455297281">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="499104177304720" type="ArrowD">
+                    <param id="0" name="Object">Wall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="562546421381617" type="ArrowD" />
+            </actions>
+        </event-block>
+        <event-block sid="627168735216696">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="471431863841810" type="ArrowL">
+                    <param id="0" name="Object">Wall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="898758090495880" type="ArrowL" />
+            </actions>
+        </event-block>
+        <event-block sid="757096669739424">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="193458960192523" type="ArrowR">
+                    <param id="0" name="Object">Wall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="958655412827127" type="ArrowR" />
+            </actions>
+        </event-block>
+        <event-block sid="538841869691686">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="404765968484672" type="ArrowU">
+                    <param id="0" name="Object">Wall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="474406189137917" type="ArrowU" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="203951901570187" title="Gold2">
+            <sub-events>
+                <event-block sid="229903971814227">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="788688544574784" type="HudScore">
+                            <param id="0" name="Text">Gold</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="545522329598881">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="101635869969006" type="Coin">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="778538744969220" type="Coin" />
+                        <action id="-10" name="Add to" sid="396985729496177" type="System">
+                            <param id="0" name="Variable">Gold</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741468814036038">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="345996492233155" type="Slime" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="231538054680902" type="System">
+                            <param id="0" name="Object to create">Coin</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Slime.X</param>
+                            <param id="3" name="Y">Slime.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="736331634756068" title="Health2">
+            <sub-events>
+                <event-block sid="531916076992941">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="536251807273865" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="933286514369531" type="Heart">
+                            <param id="0" name="Animation">&quot;4Heart&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450068653156099">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="796755306521033" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="549632733131501" type="Heart">
+                            <param id="0" name="Frame number">Health</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868296106399585">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="938110740944800" type="Slime">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="863421562866436" type="System">
+                            <param id="0" name="Variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="374757177194119" type="Slime">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="147270707110701" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="871882357554003" type="Slime">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383733508850857">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="633125691927117" type="System">
+                            <param id="0" name="Variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="524379002910000" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="145190532073869" type="System" />
+                        <action id="-21" name="Reset global variables" sid="466688418093652" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="541688118115928" title="Stamina Bar2">
+            <sub-events>
+                <event-block sid="953277265436695">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="385907371877944" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="361971347515093" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="944800606520503" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="955295814475515">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="110854446787345" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="141083338933288" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="392024173038983">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="798495616388190" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="452161137398570" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713890709729240">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="932915197385029" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="188903091672621" type="StaminaBar">
+                            <param id="0" name="Width">self.max_width*Stamina</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="571893323014337">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="473073771207547" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="993419421305317" type="StaminaBar">
+                            <param id="0" name="Width">self.max_width*Stamina</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="548354167428266">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="810660630275550" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="474901622345866" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="667177635817690" title="Sprint2">
+            <sub-events>
+                <event-block sid="449587647873714">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="395449292431063" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="539251774555267" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="993376128025193" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="630847967250989" type="System">
+                            <param id="0" name="First value">Character.X</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Wall.X+50</param>
+                        </condition>
+                        <condition disabled="1" id="-8" inverted="1" name="Compare two values" sid="995289199677641" type="System">
+                            <param id="0" name="First value">Character.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Wall.Y-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="585393571188561" type="Character">
+                            <param id="0" name="X">Character.X-50</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="960852637286503" type="System">
+                            <param id="0" name="Variable">Stamina</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="616535672025476" title="Sword">
+            <sub-events>
+                <event-block sid="930739746555358">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="660923955371604" type="Sword">
+                            <param id="0" name="Object">Slime</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="551436604906135" type="Slime" />
+                    </actions>
+                </event-block>
+                <event-block sid="943903133635412">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="829785576667674" type="Sword">
+                            <param id="0" name="Object">BeerBottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="572617321361147" type="BeerBottle" />
+                    </actions>
+                </event-block>
+                <event-block sid="760047837964749">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="685878414249467" type="ArrowD">
+                            <param id="0" name="Object">Slime</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="369807486411534" type="Slime" />
+                    </actions>
+                </event-block>
+                <event-block sid="158639814873501">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="529351951257258" type="ArrowD">
+                            <param id="0" name="Object">BeerBottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="171321721719351" type="BeerBottle" />
+                    </actions>
+                </event-block>
+                <event-block sid="347220283508300">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="628544298547729" type="ArrowL">
+                            <param id="0" name="Object">Slime</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="694884907035091" type="Slime" />
+                    </actions>
+                </event-block>
+                <event-block sid="644182535730091">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="543567814782012" type="ArrowL">
+                            <param id="0" name="Object">BeerBottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="568964936038654" type="BeerBottle" />
+                    </actions>
+                </event-block>
+                <event-block sid="962281783130290">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="898740548772406" type="ArrowR">
+                            <param id="0" name="Object">Slime</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="988900408403732" type="Slime" />
+                    </actions>
+                </event-block>
+                <event-block sid="184132501489123">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="974433237420053" type="ArrowR">
+                            <param id="0" name="Object">BeerBottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="119619354849767" type="BeerBottle" />
+                    </actions>
+                </event-block>
+                <event-block sid="256713012168729">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="102969279152789" type="ArrowU">
+                            <param id="0" name="Object">Slime</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="510796364420846" type="Slime" />
+                    </actions>
+                </event-block>
+                <event-block sid="616067013611951">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="799259590582580" type="ArrowU">
+                            <param id="0" name="Object">BeerBottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="463784744201185" type="BeerBottle" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
