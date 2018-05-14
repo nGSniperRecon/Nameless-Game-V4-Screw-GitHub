@@ -2102,6 +2102,21 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite10" sid="732201461985619">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435903449577093" speed="5">
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.642857" original-source="C:\Users\jhedges\Downloads\GUD.gif">
+                        <collision-poly>
+                            <point x="0.0354167" y="0.0714286" />
+                            <point x="0.970833" y="0.0758929" />
+                            <point x="0.96875" y="0.9375" />
+                            <point x="0.0395833" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

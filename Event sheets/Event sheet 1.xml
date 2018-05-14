@@ -720,19 +720,15 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="MoveTo" id="5" name="Set current speed" sid="722523547836298" type="BeerBottle">
-                            <param id="0" name="Current speed">200</param>
-                        </action>
-                        <action behavior="MoveTo" id="6" name="Move to object" sid="534154228784104" type="BeerBottle">
-                            <param id="0" name="Target">Character</param>
-                        </action>
                         <action id="4" name="Set animation" sid="529065414937469" type="BeerBottle">
                             <param id="0" name="Animation">&quot;Blam&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-11" name="Subtract from" sid="202134487598947" type="System">
-                            <param id="0" name="Variable">Health</param>
-                            <param id="1" name="Value">1</param>
+                        <action behavior="MoveTo" disabled="1" id="5" name="Set current speed" sid="722523547836298" type="BeerBottle">
+                            <param id="0" name="Current speed">200</param>
+                        </action>
+                        <action behavior="MoveTo" disabled="1" id="6" name="Move to object" sid="534154228784104" type="BeerBottle">
+                            <param id="0" name="Target">Character</param>
                         </action>
                         <action id="11" name="Set collisions enabled" sid="246932241850535" type="BeerBottle">
                             <param id="0" name="Collisions">0</param>
@@ -746,6 +742,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-11" name="Subtract from" sid="202134487598947" type="System">
+                            <param id="0" name="Variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="857409743142426" type="BeerBottle" />
                         <action id="-16" name="Wait" sid="682732332477316" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -950,7 +950,7 @@
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="633125691927117" type="System">
                             <param id="0" name="Variable">Health</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
