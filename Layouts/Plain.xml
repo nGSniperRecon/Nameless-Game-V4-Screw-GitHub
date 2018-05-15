@@ -81,14 +81,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>195.454330444</x>
-                        <y>543.254638672</y>
+                        <x>196.141830444</x>
+                        <y>552.875488281</y>
                         <z>0</z>
                         <width>28.727661133</width>
                         <height>23.490661621</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GUDMAT" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>192.813781738</x>
+                        <y>558.48626709</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>25.718238831</height>
+                        <depth>0</depth>
+                        <hotspotX>0.466666669</hotspotX>
+                        <hotspotY>0.642857134</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -236,8 +258,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -247,28 +269,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite10" uid="31">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>194.187728882</x>
-                        <y>557.113342285</y>
-                        <z>0</z>
-                        <width>30</width>
-                        <height>25.718238831</height>
-                        <depth>0</depth>
-                        <hotspotX>0.466666669</hotspotX>
-                        <hotspotY>0.642857134</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PlainWall" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>

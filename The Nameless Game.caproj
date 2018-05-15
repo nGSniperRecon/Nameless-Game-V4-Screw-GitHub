@@ -64,6 +64,11 @@
             </object-type>
             <object-type global="1" name="HudScore" sid="381859410291910">
                 <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="410622522417677">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <texture />
             </object-type>
         </object-folder>
@@ -127,6 +132,7 @@
             <animation-folder>
                 <animation framecount="12" loop="0" name="WalkDown" pingpong="0" repeatcount="1" repeatto="0" sid="771122622543200" speed="12">
                     <frame duration="1" hotspotX="0.44" hotspotY="1.01639" original-source="C:\Users\jhedges\Downloads\_thornWalking (1).png">
+                        <image-point name="Imagepoint 1" x="0.64" y="-0.0491803" />
                         <collision-poly>
                             <point x="0.28" y="0" />
                             <point x="0.87" y="0.0327869" />
@@ -1258,6 +1264,11 @@
         </object-type>
         <object-type global="1" name="Text3" sid="165387455737594">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="115918538086560">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Sprite2" sid="825034947858144">
             <plugin id="Sprite" />
@@ -1610,6 +1621,11 @@
         </object-type>
         <object-type global="1" name="Heart" sid="256941650006002">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="595033195758714">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="5" loop="0" name="4Heart" pingpong="0" repeatcount="1" repeatto="0" sid="727416401023516" speed="5">
                     <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
@@ -1622,6 +1638,11 @@
         </object-type>
         <object-type global="1" name="Melee" sid="574730186950330">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="509052966627479">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593975542674690" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Inventory_Slot.png" />
@@ -1630,6 +1651,11 @@
         </object-type>
         <object-type global="1" name="Range" sid="504162972252475">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="349637606918909">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571860455007354" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Inventory_Slot.png" />
@@ -1682,6 +1708,11 @@
         </object-type>
         <object-type global="1" name="BowIcon" sid="938976057871920">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="412655293901714">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380696328699569" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Bow Icon.gif">
@@ -1704,6 +1735,11 @@
             <instance-variables>
                 <instance-variable name="max_width" sid="558123152151461" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="269095897183943">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <texture />
         </object-type>
         <object-type name="Sprite3" sid="836479061122222">
@@ -1741,6 +1777,11 @@
         </object-type>
         <object-type global="1" name="Sprite7" sid="960621956365107">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="280931489556040">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614359362964742" speed="5">
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.958333" original-source="C:\Users\jhedges\Downloads\Sword Icon.gif">
@@ -1954,7 +1995,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ArrowL" sid="191403155739802">
+        <object-type global="1" name="ArrowL" sid="191403155739802">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651979044142923" speed="5">
@@ -2102,7 +2143,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite10" sid="732201461985619">
+        <object-type name="GUDMAT" sid="732201461985619">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435903449577093" speed="5">
@@ -2117,6 +2158,32 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite11" sid="493851348921438">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901008171167519" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jhedges\Downloads\Stairs.gif">
+                        <collision-poly>
+                            <point x="0.34375" y="0.34375" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.6875" y="0.6875" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpawnPoint" sid="815059885582549">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479142934486964" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -2126,7 +2193,6 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Hud.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

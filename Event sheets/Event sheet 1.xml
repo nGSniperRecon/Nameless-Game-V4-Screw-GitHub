@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <include>Hud</include>
         <variable constant="0" name="SlimeHeath" sid="630714026279354" static="0" type="number">3</variable>
         <variable constant="0" name="Sprint" sid="447135965858566" static="0" type="number">0</variable>
         <variable constant="0" name="Stamina" sid="295191592883007" static="0" type="number">15</variable>
@@ -238,11 +237,11 @@
                     <actions>
                         <action id="-3" name="Set position" sid="991592270058822" type="Sword">
                             <param id="0" name="X">Character.X</param>
-                            <param id="1" name="Y">Character.Y</param>
+                            <param id="1" name="Y">Character.Y-20</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="847820441681928">
+                <event-block disabled="1" sid="847820441681928">
                     <conditions>
                         <condition id="0" name="On click" sid="550873769166094" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
@@ -801,12 +800,6 @@
                 <action id="-2" name="Go to layout" sid="282191500269041" type="System">
                     <param id="0" name="Layout">Plain</param>
                 </action>
-                <action id="-3" name="Create object" sid="576127722287664" type="System">
-                    <param id="0" name="Object to create">Character</param>
-                    <param id="1" name="Layer">&quot;Layout&quot;</param>
-                    <param id="2" name="X">0</param>
-                    <param id="3" name="Y">0</param>
-                </action>
                 <action id="-3" name="Set position" sid="250578327143412" type="Character">
                     <param id="0" name="X">House.X</param>
                     <param id="1" name="Y">House.Y+10</param>
@@ -823,15 +816,29 @@
                 <action id="-2" name="Go to layout" sid="970622757737979" type="System">
                     <param id="0" name="Layout">Fungeon</param>
                 </action>
-                <action id="-3" name="Create object" sid="492694865909641" type="System">
-                    <param id="0" name="Object to create">Character</param>
-                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                    <param id="2" name="X">0</param>
-                    <param id="3" name="Y">0</param>
+            </actions>
+        </event-block>
+        <event-block sid="454579396713266">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="598181956068788" type="Character">
+                    <param id="0" name="Object">Sprite11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="996885442421802" type="System">
+                    <param id="0" name="Layout">Wooden_House</param>
                 </action>
-                <action id="-3" name="Set position" sid="230576333582991" type="Character">
-                    <param id="0" name="X">Stairs.X</param>
-                    <param id="1" name="Y">Stairs.Y+10</param>
+            </actions>
+        </event-block>
+        <event-block sid="974433326584942">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="190896478659134" type="Character">
+                    <param id="0" name="Object">GUDMAT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="131436768104021" type="System">
+                    <param id="0" name="Layout">Wooden_House</param>
                 </action>
             </actions>
         </event-block>
@@ -1046,6 +1053,16 @@
                         <action id="-9" name="Set value" sid="474901622345866" type="System">
                             <param id="0" name="Variable">Stamina</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="3" name="Set speed" sid="400689361144733" type="Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="2" name="Stop" sid="104391209513056" type="Character" />
+                        <action id="-16" name="Wait" sid="203261326758882" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="333688334053378" type="Character">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
